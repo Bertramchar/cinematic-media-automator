@@ -14,37 +14,39 @@ Dynamic Audio Mixing: Blends original video audio with background music, featuri
 
 🛠 Prerequisites
 1. Install FFmpeg (The Engine)
-This script requires FFmpeg to be installed on your system. Unlike many other tools, this script is optimized for "lite" environments where only the main binary is available.
+This script requires FFmpeg to be installed on your system.
+Unlike many other tools, this script is optimized for "lite" environments where only the main binary is available.
 
 MacOS (via Homebrew):
 
 Bash
 brew install ffmpeg
-Windows (via Chocolatey):
+Windows (via Chocolatey).
 
 PowerShell
 choco install ffmpeg
-Linux (Ubuntu/Debian):
+Linux (Ubuntu/Debian).
 
 Bash
 sudo apt update && sudo apt install ffmpeg
 2. Python Dependencies
-Install the required image processing libraries:
+Install the required image processing libraries.
 
 Bash
 pip install -r requirements.txt
-(Content of requirements.txt: Pillow, pillow-heic)
+(Content of requirements.txt: Pillow, pillow-heic).
 
 🚀 Usage
-Prepare your media: Place the script in a folder containing the photos and videos you want to process.
+Prepare your media by placing the script in a folder containing the photos and videos you want to process.
 
-Add Music (Optional): Drop an MP3 file named background_music.mp3 in the same folder.
+Add Music (Optional) - Drop an MP3 file named background_music.mp3 in the same folder.
 
 Run the script:
 
 Bash
 python3 mashup.py
-🧠 Why I Built It This Way (Technical Deep Dive)
+
+Why I Built It This Way (Technical Deep Dive)
 1. Why skip ffprobe?
 Most automation scripts rely on ffprobe to gather metadata. However, in many serverless environments or "lite" portable FFmpeg builds, ffprobe isn't included.
 
